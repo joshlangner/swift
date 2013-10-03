@@ -1,5 +1,5 @@
 /* 	
-	Swift.env 1.0
+	Swift.env 1.1
  	By @JoshLangner 
 
 	Get info about an environment, e.g. browser / device
@@ -18,6 +18,12 @@
 		browser = browser? [browser[1], browser[2]]: [browserName, navigator.appVersion, '-?'];
 
 		return browser;
+	},
+
+	// get the touch support info
+	touchable: function() {
+		return 'ontouchstart' in window || 'onmsgesturechange' in window;
+		// returns true if device has touch support, false if not
 	},
 
 	// GUESS a device type based on various criteria
