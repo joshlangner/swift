@@ -17,9 +17,28 @@ Core Principles
 
 Swift includes many unique fully standalone tools, with additional documentation coming soon. These include:
 
-* Swift.date - simple date formatting. Not nearly as robust as libraries such as the excellent MomentJS (http://momentjs.com/), but gets the job done
-* Swift.effects - an effects collection. Initial function is a cascading effects function, which triggers an effect across a number of elements in a sequence
-* Swift.env - simple functions to get browser name / version, as well as a device type "guess"
-* Swift.loaders - dynamically loading and executing scripts in a sequence, and a function to check whether an external script has finished loading
-* Swift.numbers - two functions to shorten numbers. One in a "#,###" format, and the other will convert 100000000 into "100m" for easier fitting into tight design spaces
-* Swift.placeholder - attempts to resolve inconsistent styling of placeholder text
+### Swift.date
+Simple date formatting. Not nearly as robust as libraries such as the excellent MomentJS (http://momentjs.com/), but gets the job done
+
+### Swift.numbers
+Two functions to shorten numbers. One in a "#,###" format, and the other will convert 100000000 into "100m" for easier fitting into tight design spaces
+
+Usage:
+```javascript
+var n = 54189013415.098943178391;
+Swift.formatNumber('#,##0.',num); // outputs 54,189,013,415
+Swift.formatNumber('#,##0.#',num); // outputs 54,189,013,415.1
+Swift.formatNumber('#,##0.###',num); // outputs 54,189,013,415.099
+```
+
+### Swift.effects
+An effects collection. Initial function is a cascading effects function, which triggers an effect across a number of elements in a sequence
+
+### Swift.env
+Simple functions to get browser name / version, as well as a device type "guess"
+
+### Swift.loaders
+Dynamically loading and executing scripts in a sequence, and a function to check whether an external script has finished loading
+
+### Swift.placeholder
+Attempts to resolve inconsistent styling of placeholder text
