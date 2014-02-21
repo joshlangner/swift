@@ -19,12 +19,17 @@ Swift is designed to be as independent as possible, but some external utilities 
 ## Documentation: Swift Utils
 
 
-### Swift.elementQuery
+### Swift.elementquery
 Provides a "media query" capability for elements, designed for use with responsive layouts.
 
 Usage:
 ```javascript
-// example coming soon
+// call once as part of your document readystate
+Swift.elementquery.init({
+	containers: '.myClassName', // class name of container(s) you want to watch / query
+	classprevix: 'myclass-prefix', // previx of responsive classes that will get added to containers
+	debounce: 100 // delay before function is fired, included so you can make adjustments per your app
+});
 ```
 
 ### Swift.loaders
@@ -32,7 +37,22 @@ Dynamically loading and executing scripts in a sequence, and a function to check
 
 Usage:
 ```javascript
-// example coming soon
+// get local scripts in a specific order
+Swift.getScripts([
+	'scripts/script-a.js',
+	'scripts/script-b.js'
+], function() {
+	alert('done!'); // fires when last script is loaded
+});
+
+// get external script by looking for known object in external script
+Swift.getExternalScript({
+	callback: myCallback(), // callback to fire on complete
+	object: $, // object to check for, in this case looking for the jQuery object
+	timeout: 10000, // maximum time to wait
+	interval: 1000, // polling interval. If you know your script will load faster, set this lower to minimize wait
+	error: myErrorCallback // callback function to handle case where timeout is not long enough
+}); 
 ```
 
 ### Swift.numbers

@@ -27,47 +27,40 @@
 			}
 		})
 	}
-
 	function poll() {
 		i++;
 		check();
 	}
-
 	function getScript(s) {
 		return $.getScript(s);
 	}
-	
 }
 
 /*  
-	Swift.xternal 0.8 beta
+	Swift.xternal 0.9
  	By @JoshLangner
 
 	Checks for existence of object that is loaded by outside-domain library defined in a
 	HTML <script> tag. Examples: Google maps, Typekit, etc.
 	Params = [Function to execute when object is ready], [object to check], [timeout in ms]
 */
-;Swift.xternal = function(callback, obj, t) {
-	var timeout = 10000, 
-		callback = callback;
-
-	poll();	
-
+;Swift.getExternalScript = function(o) {
+	var o = o || { callback: null, object: null, timeout: 10000, interval: 1000, error: function(){ return false } };
+	poll();
 	function poll() {
 		setTimeout(function() {
-			timeout = timeout - 500;
+			o.timeout = o.timeout - 500;
 			check();
-		}, 1000) // high; should be made configurable
+		}, o.interval);
 	}
 	function check() {
-
-		if ((typeof eval(obj)) !== 'undefined' && obj !== 'xternal' && (typeof eval(obj)) !== 'string') {
-			callback();
+		if ((typeof eval(o.object)) !== 'undefined' && o.object !== 'getExternalScript' && (typeof eval(o.object)) !== 'string') {
+			o.callback();
 			return false;
-		} else if (timeout > 0) {
+		} else if (o.timeout > 0) {
 			poll();
 		} else {
-			return false;
+			o.error();
 		}
 	}
 };
