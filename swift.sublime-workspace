@@ -3,15 +3,28 @@
 	{
 		"selected_items":
 		[
+			[
+				"cont",
+				"containerWidth"
+			]
 		]
 	},
 	"buffers":
 	[
 		{
+			"file": "swift-utils/swift-env.js",
 			"settings":
 			{
-				"buffer_size": 0,
+				"buffer_size": 1366,
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "swift-utils/swift-elementquery.js",
+			"settings":
+			{
+				"buffer_size": 1225,
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -42,11 +55,15 @@
 	},
 	"file_history":
 	[
+		"/C/Users/Josh/Documents/GitHub/swift/swift-utils/swift-loaders.js",
+		"/C/Users/Josh/Documents/GitHub/swift/swift-utils/swift-numbers.js",
+		"/C/Users/Josh/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/Josh/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
 		"/C/Users/Josh/Desktop/EAIDEV/Neustar/aa-ui/src/main/web/index.dev.html"
 	],
 	"find":
 	{
-		"height": 0.0
+		"height": 38.0
 	},
 	"find_in_files":
 	{
@@ -60,6 +77,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"windows",
+			"endings"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -77,28 +96,59 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
+					"file": "swift-utils/swift-env.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 0,
+						"buffer_size": 1366,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								161,
+								161
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "swift-utils/swift-elementquery.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1225,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								297,
+								297
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -112,7 +162,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 0.0
+		"height": 26.0
 	},
 	"input":
 	{
@@ -148,7 +198,7 @@
 	"project": "swift.sublime-project",
 	"replace":
 	{
-		"height": 0.0
+		"height": 48.0
 	},
 	"save_all_on_build": true,
 	"select_file":

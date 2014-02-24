@@ -1,0 +1,4 @@
+# Sublime Project files
+*.sublime-project
+*.sublime-workspace
+swift.sublime-workspace

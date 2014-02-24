@@ -61,9 +61,11 @@ Two functions to shorten numbers. One in a "#,###" format, and the other will co
 Usage:
 ```javascript
 var n = 54189013415.098943178391;
-Swift.formatNumber('#,##0.',num); // outputs 54,189,013,415
-Swift.formatNumber('#,##0.#',num); // outputs 54,189,013,415.1
-Swift.formatNumber('#,##0.###',num); // outputs 54,189,013,415.099
+Swift.num.format('#,##0.',num); // outputs 54,189,013,415
+Swift.num.format('#,##0.#',num); // outputs 54,189,013,415.1
+Swift.num.format('#,##0.###',num); // outputs 54,189,013,415.099
+
+Swift.num.short(n); // outputs 54.1b
 ```
 
 ### Swift.effects
