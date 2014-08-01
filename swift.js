@@ -1,6 +1,6 @@
 /*  -----------------------------------------
 	
-	Swift v0.1
+	Swift v0.0.1
 	By Joshua Langner @joshlangner
 
 	UNDER DEVELOPMENT

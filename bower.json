@@ -1,0 +1,18 @@
+{
+  "name": "swift",
+  "description": "Minimalist web application framework and many utilities.",
+  "version": "0.0.1",
+  "keywords": [
+    "js",
+    "front-end",
+    "framework",
+    "web"
+  ],
+  "homepage": "https://github.com/joshlangner/swift",
+  "main": [
+    "swift.js"
+  ],
+  "ignore": [
+    "/.*"
+  ]
+}
